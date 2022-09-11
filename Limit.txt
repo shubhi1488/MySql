@@ -1,0 +1,22 @@
+The Limit clause is used to specify the number of records that is to be returned.......................................................................
+
+mysql> select * from customer
+    -> limit 1;
++---------+-----------+---------------+------------+------------+---------+
+| cust_Id | cust_name | address       | city       | postalcode | country |
++---------+-----------+---------------+------------+------------+---------+
+|     101 | raman     | Obere Str. 57 | New Jersey |      12209 | USA     |
++---------+-----------+---------------+------------+------------+---------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from customer
+    -> where country="India"
+    -> limit 2;
++---------+-----------+--------------+----------+------------+---------+
+| cust_Id | cust_name | address      | city     | postalcode | country |
++---------+-----------+--------------+----------+------------+---------+
+|     103 | Shikha    | Nanital Road | Bareilly |      12234 | India   |
+|     105 | Tina      | Mayur Vihar  | Delhi    |      33346 | India   |
++---------+-----------+--------------+----------+------------+---------+
+2 rows in set (0.00 sec)
