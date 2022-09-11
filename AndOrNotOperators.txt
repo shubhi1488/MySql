@@ -1,0 +1,43 @@
+And & Or operators are used to filter the records on the basis of more than one records
+i)The AND operator will filter the records if both the conditions are true.
+ii) The OR operator will filter the records if any of the conditions are true.
+The NOT  operator will display all the records in which the condition is not true.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> select * from customer
+    -> where country="Germany" AND city="Berlin";
++---------+-----------+---------------+--------+------------+---------+
+| cust_Id | cust_name | address       | city   | postalcode | country |
++---------+-----------+---------------+--------+------------+---------+
+|     101 | rakesh    | Obere Str. 57 | Berlin |      12209 | Germany |
++---------+-----------+---------------+--------+------------+---------+
+1 row in set (0.02 sec)
+
+mysql> select * from customer
+    -> where  country="Germany" or city="Stuttgart";
++---------+-----------+---------------+--------+------------+---------+
+| cust_Id | cust_name | address       | city   | postalcode | country |
++---------+-----------+---------------+--------+------------+---------+
+|     101 | rakesh    | Obere Str. 57 | Berlin |      12209 | Germany |
++---------+-----------+---------------+--------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from customer
+    -> where country="India" or country="Mexico";
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
++---------+-----------+-------------------------------+-------------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customer
+    -> where NOT country="Germany";
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
++---------+-----------+-------------------------------+-------------+------------+---------+
+3 rows in set (0.00 sec)
