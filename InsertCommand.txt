@@ -1,0 +1,13 @@
+MySql command to insert into the table -----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> insert into student
+    -> values(101,"shubhi",8755055782,"Bareilly");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into student
+    -> values
+    -> (102,"anamika",9897772106,"234/A CivilLines Agra"),
+    -> (103,"chirag",9996660067,"DD Puram Noida"),
+    -> (104,"doly",888666444,"Bandra Mumbai");
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
