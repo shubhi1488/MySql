@@ -1,0 +1,19 @@
+The field with Null value is the field with no value.
+There are two operators through which we can check whether the table have null values or not i.e IS NULL and NOT NULL
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+mysql> select * from customer
+    -> where cust_name IS NULL;
+Empty set (0.00 sec)
+
+mysql> select * from customer
+    -> where cust_name is NOT NULL;
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     101 | rakesh    | Obere Str. 57                 | Berlin      |      12209 | Germany |
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
++---------+-----------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
