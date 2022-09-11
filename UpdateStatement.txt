@@ -1,0 +1,19 @@
+update statement is used to modify the existing record of the table----------------------------
+
+mysql> update customer
+    -> set country="USA"
+    -> where cust_Id=101;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> select * from customer;
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     101 | raman     | Obere Str. 57                 | New Jersey  |      12209 | USA     |
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
++---------+-----------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
