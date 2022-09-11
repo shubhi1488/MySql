@@ -1,0 +1,22 @@
+Where clause is used-
+i)to fetch the data of those records which will match to the mentioned condition
+ii)it is also used to filter the records
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+mysql> select * from student
+    -> where mobileno=8755055782;
++--------+--------+------------+----------+
+| rollno | name   | mobileno   | address  |
++--------+--------+------------+----------+
+| 101    | shubhi | 8755055782 | Bareilly |
++--------+--------+------------+----------+
+1 row in set (0.03 sec)
+
+mysql> select rollno,name,address from student
+    -> where mobileno=8755055782;
++--------+--------+----------+
+| rollno | name   | address  |
++--------+--------+----------+
+| 101    | shubhi | Bareilly |
++--------+--------+----------+
+1 row in set (0.00 sec)
