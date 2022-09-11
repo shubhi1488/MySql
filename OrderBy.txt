@@ -1,0 +1,39 @@
+order by keyword is used to sort the records in ascending or descending order.
+By default the data will be sorted in ascending order to sort the records in descending use desc keyword.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+mysql> select * from customer
+    -> order by country;
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     101 | rakesh    | Obere Str. 57                 | Berlin      |      12209 | Germany |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
++---------+-----------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customer
+    -> order by postalcode;
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     101 | rakesh    | Obere Str. 57                 | Berlin      |      12209 | Germany |
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
++---------+-----------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customer
+    -> order by postalcode desc;
++---------+-----------+-------------------------------+-------------+------------+---------+
+| cust_Id | cust_name | address                       | city        | postalcode | country |
++---------+-----------+-------------------------------+-------------+------------+---------+
+|     104 | Tanya     | 120 Hanover Sq.               | London      |      30450 | UK      |
+|     101 | rakesh    | Obere Str. 57                 | Berlin      |      12209 | Germany |
+|     103 | sarthak   | bandra                        | Mumbai      |      10203 | India   |
+|     102 | ramesh    | Avda. de la Constitución 2222 | México D.F. |       5021 | Mexico  |
++---------+-----------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
