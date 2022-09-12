@@ -23,3 +23,14 @@ mysql> desc student;-------------it will show the basic structure of the table t
 | address  | varchar(40) | YES  |     | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
 4 rows in set (0.02 sec)
+
+-------to show how many tables are there in the database--------------------------
+mysql> show tables;
++--------------------+
+| Tables_in_learning |
++--------------------+
+| customer           |
+| product            |
+| student            |
++--------------------+
+3 rows in set (0.02 sec)
