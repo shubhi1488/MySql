@@ -1,0 +1,29 @@
+Count()- This function returns the number of counts of the records that matches the given condition
+
+mysql> select count(Product_Id) from Product;
++-------------------+
+| count(Product_Id) |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.01 sec)
+
+Avg()-This function finds out the average value of the numeric column
+
+mysql> select avg(Price) from Product;
++------------+
+| avg(Price) |
++------------+
+|   108.8000 |
++------------+
+1 row in set (0.00 sec)
+
+Sum()-This function finds out the sum of the numeric column
+
+mysql> select sum(Quantity) from Product;
++---------------+
+| sum(Quantity) |
++---------------+
+|            31 |
++---------------+
+1 row in set (0.00 sec)
