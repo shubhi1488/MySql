@@ -1,0 +1,24 @@
+Delete statement- It is used to delete a particular record and we can also delete whole table also.
+
+mysql> delete from customer
+    -> where cust_Id=102;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from customer;
++---------+-----------+-----------------+------------+------------+---------+
+| cust_Id | cust_name | address         | city       | postalcode | country |
++---------+-----------+-----------------+------------+------------+---------+
+|     101 | raman     | Obere Str. 57   | New Jersey |      12209 | USA     |
+|     104 | Tanya     | 120 Hanover Sq. | London     |      30450 | UK      |
+|     103 | Shikha    | Nanital Road    | Bareilly   |      12234 | India   |
+|     105 | Tina      | Mayur Vihar     | Delhi      |      33346 | India   |
+|     106 | Garima    | abc vihar       | London     |      99667 | UK      |
+|     107 | rahul     | mall road       | Berlin     |      88556 | Germany |
++---------+-----------+-----------------+------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> delete from student;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from student;
+Empty set (0.00 sec)
